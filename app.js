@@ -39,6 +39,13 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(`${URL}/guest`, guestRouter)
 
+app.use('/', (req, res) => {
+  return res.status(200).json({
+    status: 200,
+    message: 'Server Is Running Well'
+  })
+})
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404))
