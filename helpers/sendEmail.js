@@ -6,11 +6,8 @@ const path = require('path')
 module.exports = async (email, subject, url) => {
   const template = fs.readFileSync(path.resolve(__dirname, './template.html'), 'utf-8')
 
-  console.log('email', process.env.EMAIL_USER)
-  console.log('password', process.env.EMAIL_PASS)
   const transporter = mailer.createTransport({
     service: 'gmail',
-    host: 'smtp.gmail.com',
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS
