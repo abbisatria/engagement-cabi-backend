@@ -13,7 +13,7 @@ module.exports = {
       req.socket.emit('list', 'test')
 
       if (payload.email) {
-        sendEmail(payload.email, 'Invitation Engagement Abbi ❤️ Tasya', 'http://localhost:3000')
+        sendEmail(payload.email, 'Invitation Engagement Abbi ❤️ Tasya', 'https://cabicode.site')
       }
 
       return response(res, 200, true, 'Konfirmasi Kehadiran Berhasil')
